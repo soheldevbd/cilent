@@ -53,7 +53,7 @@ export default function BookDetails() {
         <img
           src={book.image}
           alt={book.title}
-          className="w-full rounded-2xl object-cover md:max-h-[560px]"
+          className="w-full rounded-2xl object-cover md:max-h-140"
         />
         <div>
           <span className="rounded-full bg-[#eaf2ec] px-3 py-1 text-sm font-bold text-[#245c45]">

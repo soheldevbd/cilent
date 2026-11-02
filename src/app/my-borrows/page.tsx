@@ -49,7 +49,7 @@ export default function MyBorrows() {
         <p className="card p-8 muted">You have not borrowed any books.</p>
       ) : (
         <div className="overflow-x-auto rounded-2xl bg-white">
-          <table className="w-full min-w-[650px] text-left text-sm">
+          <table className="w-full min-w-162.5 text-left text-sm">
             <thead className="bg-[#edf3ed]">
               <tr>
                 {['Book', 'Borrow date', 'Return date', 'Action'].map(x => (

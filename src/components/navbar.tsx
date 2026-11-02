@@ -15,7 +15,7 @@ export function Navbar() {
   ];
   return (
     <header className="sticky top-0 z-40 border-b border-[#e8ebe5] bg-white/95 backdrop-blur">
-      <div className="container flex min-h-[72px] items-center justify-between gap-4">
+      <div className="container flex min-h-18 items-center justify-between gap-4">
         <Link
           href="/"
           className="flex items-center gap-2 text-xl font-black text-[#245c45]"
@@ -30,7 +30,7 @@ export function Navbar() {
           {open ? <X /> : <Menu />}
         </button>
         <nav
-          className={`${open ? 'flex' : 'hidden'} absolute left-0 top-[72px] w-full flex-col gap-4 border-b bg-white p-5 md:static md:flex md:w-auto md:flex-row md:items-center md:border-0 md:p-0`}
+          className={`${open ? 'flex' : 'hidden'} absolute left-0 top-18 w-full flex-col gap-4 border-b bg-white p-5 md:static md:flex md:w-auto md:flex-row md:items-center md:border-0 md:p-0`}
         >
           {links.map(l => (
             <Link

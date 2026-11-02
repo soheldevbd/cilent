@@ -66,7 +66,7 @@ export default function Home() {
                     {s.title}
                   </h1>
                   <p className="mb-7 max-w-lg text-white/85">{s.desc}</p>
-                  <Link className="btn bg-white !text-[#245c45]" href="/books">
+                  <Link className="btn bg-white text-[#245c45]!" href="/books">
                     Browse Books
                   </Link>
                 </div>
