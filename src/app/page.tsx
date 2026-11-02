@@ -2,7 +2,9 @@
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
+// @ts-expect-error Swiper's CSS is loaded by Next.js but has no TS declaration.
 import 'swiper/css';
+// @ts-expect-error Swiper's CSS is loaded by Next.js but has no TS declaration.
 import 'swiper/css/pagination';
 import { useEffect, useState } from 'react';
 import { BookCard, Book } from '@/components/book-card';
