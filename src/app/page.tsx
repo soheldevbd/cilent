@@ -53,7 +53,7 @@ export default function Home() {
           {slides.map(s => (
             <SwiperSlide key={s.title}>
               <div
-                className="relative flex min-h-[430px] items-center bg-cover bg-center px-8 py-16 md:px-16"
+                className="relative flex min-h-107.5 items-center bg-cover bg-center px-8 py-16 md:px-16"
                 style={{
                   backgroundImage: `linear-gradient(90deg,rgba(13,34,24,.88),rgba(13,34,24,.22)),url(${s.img})`,
                 }}
