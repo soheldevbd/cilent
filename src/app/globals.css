@@ -1,0 +1,123 @@
+@import 'tailwindcss';
+
+:root {
+  color-scheme: light;
+  --ink: #18251e;
+  --muted: #68766d;
+  --green: #1f6047;
+  --green-dark: #164b36;
+  --mint: #eaf2ec;
+  --paper: #fbfaf6;
+  --line: #e7ebe5;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+::selection {
+  background: #cfe4d4;
+  color: #153d2c;
+}
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 19px;
+  border-radius: 999px;
+  background: var(--green);
+  color: #fff;
+  font-weight: 750;
+  border: 1px solid var(--green);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 7px 18px #1f60471c;
+}
+.btn:hover {
+  background: var(--green-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px #1f60472b;
+}
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+.btn-outline {
+  background: transparent;
+  color: var(--green);
+  border-color: #b8cbbd;
+  box-shadow: none;
+}
+.btn-outline:hover {
+  background: var(--mint);
+  color: var(--green-dark);
+}
+.field {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #d9e0d9;
+  border-radius: 12px;
+  background: #fff;
+  outline: none;
+  transition:
+    border 0.2s,
+    box-shadow 0.2s;
+}
+.field:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 4px #1f604718;
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px #263a2b0a;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 38px #263a2b13;
+}
+.muted {
+  color: var(--muted);
+}
+.section {
+  padding: 68px 0;
+}
+:focus-visible {
+  outline: 3px solid #83b997;
+  outline-offset: 3px;
+}
