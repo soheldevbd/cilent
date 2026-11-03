@@ -9,9 +9,6 @@ import { BookCard, Book } from '@/components/book-card';
 import { Loader } from '@/components/loader';
 import { toast } from 'sonner';
 
-// @ts-ignore Swiper's CSS is loaded by the Next.js bundler.
-import 'swiper/css';
-
 const slides = [
   {
     tag: 'A world between pages',
