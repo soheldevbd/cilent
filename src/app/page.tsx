@@ -2,10 +2,8 @@
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
-// @ts-expect-error Swiper's CSS is loaded by Next.js but has no TS declaration.
-import 'swiper/css';
-// @ts-expect-error Swiper's CSS is loaded by Next.js but has no TS declaration.
-import 'swiper/css/pagination';
+
+
 import { useEffect, useState } from 'react';
 import { BookCard, Book } from '@/components/book-card';
 import { Loader } from '@/components/loader';
@@ -42,13 +40,34 @@ export default function Home() {
   }, []);
   return (
     <>
+      <style>{`
+        .home-swiper .swiper-pagination {
+          position: absolute;
+          bottom: 8px;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          z-index: 10;
+        }
+        .home-swiper .swiper-pagination-bullet {
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          margin: 0 4px;
+          border-radius: 9999px;
+          background: #fff;
+          opacity: 0.5;
+          cursor: pointer;
+        }
+        .home-swiper .swiper-pagination-bullet-active { opacity: 1; }
+      `}</style>
       <section className="container pt-6">
         <Swiper
           modules={[Autoplay, Pagination]}
           autoplay={{ delay: 4500, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           loop
-          className="overflow-hidden rounded-3xl"
+          className="home-swiper overflow-hidden rounded-3xl"
         >
           {slides.map(s => (
             <SwiperSlide key={s.title}>
